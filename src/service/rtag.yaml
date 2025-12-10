@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  description: rTag's API Spec
+  version: "1.0.0"
+  title: rTag API
+paths:
+  /v1/challenges:
+    get:
+      responses: 
+        '200':
+          description: List of challenges
+  /v1/challenge:
+    get:
+      parameters: 
+        - name: challengeId
+          required: true
+          schema: 
+            type: string
+      responses: 
+        '200':
+          description: Detail of single challenges
+    post: 
+      responses:
+        '200':
+          description: Create a new challenge
+  /v1/rtags:
+    get:
+      responses: 
+        '200':
+          description: List of rTags
+  /v1/rtag:
+    get:
+      parameters: 
+        - name: rtagId
+          required: true
+          schema: 
+            type: string
+      responses: 
+        '200':
+          description: Details of single rTag
+    post: 
+      responses:
+        '200':
+          description: Create a new rTag
+  /v1/users:
+    get:
+      responses: 
+        '200':
+          description: List of Users
+  /v1/user:
+    get:
+      parameters: 
+        - name: userId
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Details of a single user
