@@ -9,6 +9,11 @@ paths:
       responses: 
         '200':
           description: List of challenges
+          content: 
+            application/json: 
+              schema: 
+                items: 
+                  type: string
   /v1/challenge:
     get:
       parameters: 
@@ -28,6 +33,16 @@ paths:
       responses: 
         '200':
           description: List of rTags
+          content: 
+            application/json: 
+              schema:
+                items:
+                  type: object
+                  properties:
+                    ownerId:
+                      type: string
+                    title: 
+                      type: string
   /v1/rtag:
     get:
       parameters: 
