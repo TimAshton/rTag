@@ -4,18 +4,9 @@ info:
   version: "1.0.0"
   title: rTag API
 paths:
-  /v1/challenges:
-    get:
-      responses: 
-        '200':
-          description: List of challenges
-          content: 
-            application/json: 
-              schema: 
-                items: 
-                  type: string
   /v1/challenge:
     get:
+      description: Return details of a single challenge.
       parameters: 
         - name: challengeId
           required: true
@@ -24,10 +15,40 @@ paths:
       responses: 
         '200':
           description: Detail of single challenges
+          content:
+            application/json: 
+              schema:
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    ownerId:
+                      type: string
+                    created:
+                      type: string
+                      format: date-time
+                    title:
+                      type: string
+                    desciption:
+                      type: string
     post: 
       responses:
         '200':
           description: Create a new challenge
+  /v1/challenges:
+    get:
+      description: Return a list of matching challenges.
+      responses: 
+        '200':
+          description: List of challenges
+          content: 
+            application/json: 
+              schema: 
+                items: 
+                  type: string
+
   /v1/rtags:
     get:
       responses: 
