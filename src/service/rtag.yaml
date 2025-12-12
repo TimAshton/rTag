@@ -39,6 +39,9 @@ paths:
                 items:
                   type: object
                   properties:
+                    id:
+                      type: string
+                      format: uuid
                     ownerId:
                       type: string
                     title: 
