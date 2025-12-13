@@ -96,3 +96,8 @@ paths:
       responses:
         '200':
           description: Details of a single user
+  /v1/votes:
+    get:
+      description: Get votes for a game object
+    post:
+      description: Add a vote for a game object
