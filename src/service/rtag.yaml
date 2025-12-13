@@ -99,5 +99,25 @@ paths:
   /v1/votes:
     get:
       description: Get votes for a game object
+      responses:
+        '200':
+          description: Return votes count for game object
+          content: 
+            application/json: 
+              schema: 
+                items:
+                  type: object
+                  properties: 
+                    objId:
+                      type: string
+                    upVoteCount:
+                      type: integer
+                    downVoteCount:
+                      type: integer
+                    voteCount:
+                      type: integer
     post:
       description: Add a vote for a game object
+      responses:
+        '200':
+          description: Add a single vote to a game object
