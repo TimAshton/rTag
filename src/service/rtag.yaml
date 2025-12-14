@@ -34,9 +34,26 @@ paths:
                     desciption:
                       type: string
     post: 
+      description: Create a new challenge
+      parameters:
+        - name: name
+          schema:
+            type: string
+        - name: description
+          schema:
+            type: string
       responses:
         '200':
           description: Create a new challenge
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties:
+                    challengeId:
+                      type: string
+                      format: uuid
   /v1/challenges:
     get:
       description: Return a list of matching challenges.
