@@ -48,7 +48,35 @@ paths:
               schema: 
                 items: 
                   type: string
-
+  /v1/player:
+    get:
+      parameters: 
+        - name: playerId
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Details of a single player
+  /v1/players:
+    get:
+      responses: 
+        '200':
+          description: List of Players
+  /v1/rtag:
+    get:
+      parameters: 
+        - name: rtagId
+          required: true
+          schema: 
+            type: string
+      responses: 
+        '200':
+          description: Details of single rTag
+    post: 
+      responses:
+        '200':
+          description: Create a new rTag
   /v1/rtags:
     get:
       responses: 
@@ -67,35 +95,6 @@ paths:
                       type: string
                     title: 
                       type: string
-  /v1/rtag:
-    get:
-      parameters: 
-        - name: rtagId
-          required: true
-          schema: 
-            type: string
-      responses: 
-        '200':
-          description: Details of single rTag
-    post: 
-      responses:
-        '200':
-          description: Create a new rTag
-  /v1/users:
-    get:
-      responses: 
-        '200':
-          description: List of Users
-  /v1/user:
-    get:
-      parameters: 
-        - name: userId
-          required: true
-          schema: 
-            type: string
-      responses:
-        '200':
-          description: Details of a single user
   /v1/votes:
     get:
       description: Get votes for a game object
@@ -115,7 +114,7 @@ paths:
                     downVoteCount:
                       type: integer
                     voteCount:
-                      type: integer
+                      type: integer           
     post:
       description: Add a vote for a game object
       responses:
