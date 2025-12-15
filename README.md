@@ -8,7 +8,7 @@ Reverse Tagging Photo Challenges.
 * API/Service Layer - Java/OpenAPI
 
 ## Service Layer
-### API Summary
+### Data Structure Summary
 * GameSystem
     * currentVersion - string
 * Season
