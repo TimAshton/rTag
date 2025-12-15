@@ -4,136 +4,157 @@ info:
   version: "1.0.0"
   title: rTag API
 paths:
-  /v1/challenge:
+  /v1/game-system:
     get:
-      description: Return details of a single challenge.
-      parameters: 
-        - name: challengeId
-          required: true
-          schema: 
-            type: string
-      responses: 
-        '200':
-          description: Detail of single challenges
-          content:
-            application/json: 
-              schema:
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: string
-                      format: uuid
-                    ownerId:
-                      type: string
-                    created:
-                      type: string
-                      format: date-time
-                    title:
-                      type: string
-                    desciption:
-                      type: string
-    post: 
-      description: Create a new challenge
-      parameters:
-        - name: name
-          schema:
-            type: string
-        - name: description
-          schema:
-            type: string
+      description: Retrieve high-level game system details. There is only one.
       responses:
         '200':
-          description: Create a new challenge
+          description: TODO.
           content:
             application/json:
               schema:
                 items:
                   type: object
-                  properties:
-                    challengeId:
-                      type: string
-                      format: uuid
-  /v1/challenges:
-    get:
-      description: Return a list of matching challenges.
-      responses: 
-        '200':
-          description: List of challenges
-          content: 
-            application/json: 
-              schema: 
-                items: 
-                  type: string
-  /v1/player:
-    get:
-      parameters: 
-        - name: playerId
-          required: true
-          schema: 
-            type: string
+                  properties: {}
+    patch: 
+      description: Update the game system record.
       responses:
         '200':
-          description: Details of a single player
-  /v1/players:
+          description: TODO.
+  /v1/season:
     get:
-      responses: 
-        '200':
-          description: List of Players
-  /v1/rtag:
-    get:
-      parameters: 
-        - name: rtagId
-          required: true
-          schema: 
-            type: string
-      responses: 
-        '200':
-          description: Details of single rTag
-    post: 
+      description: Game season infomation and operations.
       responses:
         '200':
-          description: Create a new rTag
-  /v1/rtags:
-    get:
-      responses: 
-        '200':
-          description: List of rTags
-          content: 
-            application/json: 
+          description: TODO.
+          content:
+            application/json:
               schema:
                 items:
                   type: object
-                  properties:
-                    id:
-                      type: string
-                      format: uuid
-                    ownerId:
-                      type: string
-                    title: 
-                      type: string
-  /v1/votes:
-    get:
-      description: Get votes for a game object
+                  properties: {}
+    post: 
+      description: Add new season.
       responses:
         '200':
-          description: Return votes count for game object
-          content: 
-            application/json: 
-              schema: 
+          description: TODO.
+    patch: 
+      description: Update a season.
+      responses:
+        '200':
+          description: TODO.
+  /v1/player:
+    get:
+      description: Retrieve player infomation.
+      responses:
+        '200':
+          description: TODO.
+          content:
+            application/json:
+              schema:
                 items:
                   type: object
-                  properties: 
-                    objId:
-                      type: string
-                    upVoteCount:
-                      type: integer
-                    downVoteCount:
-                      type: integer
-                    voteCount:
-                      type: integer           
-    post:
-      description: Add a vote for a game object
+                  properties: {}
+    post: 
+      description: Add new player.
       responses:
         '200':
-          description: Add a single vote to a game object
+          description: TODO.
+    patch: 
+      description: Update a player.
+      responses:
+        '200':
+          description: TODO.
+  /v1/rtag:
+    get:
+      description: Retrieve rTag information.
+      responses:
+        '200':
+          description: TODO.
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties: {}
+    post: 
+      description: Add new rTag.
+      responses:
+        '200':
+          description: TODO.
+    patch: 
+      description: Update an rTag.
+      responses:
+        '200':
+          description: TODO.
+  /v1/challenge:
+    get:
+      description: Retrieve challenge information.
+      parameters: 
+        - name: challengeId
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: TODO.
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties: {}
+    post: 
+      description: Add new challenge.
+      responses:
+        '200':
+          description: TODO.
+    patch: 
+      description: Update a challenge.
+      responses:
+        '200':
+          description: TODO.
+  /v1/entries:
+    get:
+      description: Retrieve challenge entry information.
+      responses:
+        '200':
+          description: TODO.
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties: {}
+    post: 
+      description: Add new challenge entry.
+      responses:
+        '200':
+          description: TODO.
+    patch: 
+      description: Update an entry.
+      responses:
+        '200':
+          description: TODO.
+  /v1/vote:
+    get:
+      description: Retrieve vote infomation.
+      responses:
+        '200':
+          description: TODO.
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                  properties: {}
+    post: 
+      description: Add new vote to an object.
+      responses:
+        '200':
+          description: TODO.
+    patch: 
+      description: Update a vote.
+      responses:
+        '200':
+          description: TODO.
