@@ -3,7 +3,7 @@ Reverse Tagging Photo Challenges.
 
 ## Tech Stack
 * Client App - React Native
-* Cloud INfratstructure - AWS
+* Cloud Infratstructure - AWS
 * Database - DynamoDB
 * API/Service Layer - Java/OpenAPI
 
