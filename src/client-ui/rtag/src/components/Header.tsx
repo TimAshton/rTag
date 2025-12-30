@@ -11,7 +11,8 @@ export default function Header() {
                 <li><Link to={`/leaders`}>Leader Board</Link></li>
                 <li><Link to={`/challenges`}>Challenges</Link></li>
                 <li><Link to={`/challenge`}>Challenge Detail</Link></li>
-                <li><Link to={`/rtag`}>Post an rTag</Link></li>
+                <li><Link to={`/post-rtag`}>Post an rTag</Link></li>
+                <li><Link to={`/rtag`}>rTag Detail</Link></li>
                 <li><Link to={`/rtags`}>rTags</Link></li>
                 <li><Link to={`/add_challenge`}>Add a Challenge</Link></li>
             </ul>

@@ -5,7 +5,9 @@ export default function LeaderBoard() {
     return (
         <>
             <Header />
-            <div>LeaderBoard</div>
+            <div>
+                <h1>Leader Board</h1>
+            </div>
             <Footer />
         </>
     )

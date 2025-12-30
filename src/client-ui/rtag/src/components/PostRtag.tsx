@@ -1,12 +1,12 @@
 import Footer from "./Footer"
 import Header from "./Header"
 
-export default function Auth() {
+export default function PostRtag() {
     return (
         <>
             <Header />
             <div>
-                <h1>Auth</h1>
+                <h1>Post rTag</h1>
             </div>
             <Footer />
         </>

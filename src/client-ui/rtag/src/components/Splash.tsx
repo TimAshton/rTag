@@ -5,7 +5,9 @@ export default function Splash() {
     return (
         <>
             <Header />
-            <div>Splash</div>
+            <div>
+                <h1>Splash</h1>
+            </div>
             <Footer />
         </>
     )

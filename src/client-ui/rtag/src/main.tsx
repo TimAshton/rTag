@@ -16,6 +16,7 @@ import Splash from './components/Splash'
 import Rules from './components/Rules'
 import Rtag from './components/Rtag'
 import Rtags from './components/Rtags'
+import PostRtag from './components/PostRtag'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/challenge",
     element: <Challenge />
+  },
+  {
+    path: "/post-rtag",
+    element: <PostRtag />
   },
   {
     path: "/splash",

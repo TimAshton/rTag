@@ -5,7 +5,9 @@ export default function Rtag() {
     return (
         <>
             <Header />
-            <div>Rtag</div>
+            <div>
+                <h1>rTag</h1>
+            </div>
             <Footer />
         </>
     )

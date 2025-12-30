@@ -5,7 +5,9 @@ export default function Challenges() {
     return (
         <>
             <Header />
-            <div>Challenges</div>
+            <div>
+                <h1>Challenges</h1>
+            </div>
             <Footer />
         </>
     )

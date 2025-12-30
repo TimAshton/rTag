@@ -5,7 +5,9 @@ export default function Rules() {
     return (
         <>
             <Header />
-            <div>Rules</div>
+            <div>
+                <h1>Rules</h1>
+            </div>
             <Footer />
         </>
     )
