@@ -2,10 +2,14 @@
 Reverse Tagging Photo Challenges.
 
 ## Tech Stack
-* Client App - React Native
-* Cloud Infratstructure - AWS
-* Database - DynamoDB
-* API/Service Layer - Java/OpenAPI
+* API/Service Layer:
+    * Java/OpenAPI
+* Client App:
+    * React:
+        * React-Router
+* Cloud Infratstructure - AWS (?)
+* Database - DynamoDB (?)
+
 
 ## Service Layer
 ### Data Structure Summary
@@ -59,3 +63,6 @@ Reverse Tagging Photo Challenges.
     * status - enum
     * created - datetime
     * updated - datetime
+
+## UI Layer
+![Alt UI Wireframes](rTag-ui-wire-frames.png)

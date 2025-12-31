@@ -11,9 +11,13 @@ import Rtag from './components/Rtag'
 import Rtags from './components/Rtags'
 
 function App() {
+    function handleClick() {
+        alert("ALive")
+    }
+
   return (
     <div>
-      <Splash />
+      <Splash onClick={handleClick} />
       <AddChallenges />
       <Auth />
       <LeaderBoard />
